@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Crea un título y dos secciones</h1>
+    <br>
+
+    <h1 id="h1"></h1>
+    <h3 id="h3.1"></h3>
+    <p id="p1"></p>
+    <h3 id="h3.2"></h3>
+    <p id="p2"></p>
+
+    <form action="formulario">
+        <label for="titulo"><h4>Introduce el título</h4></label>
+        <input type="text" id="titulo">
+        <label for="seccion1"><h4>Introduce la sección 1</h4></label>
+        <input type="text" id="seccion1">
+        <label for="parrafo1"><h3>Introduce los párrafos de la primera sección</h3></label>
+        <input type="text" id="parrafo1">
+        <label for="seccion2"><h4>Introduce la sección 2</h4></label>
+        <input type="text" id="seccion2">
+        <label for="parrafo2"><h3>Introduce los párrafos de la segunda sección</h3></label>
+        <input type="text" id="parrafo2">
+        <br><br>
+        <input type="button" value="Rellenar" id="boton" onclick="mostrar()">
+    </form>
+
+    <script>
+        function mostrar() {
+            let titulo = document.getElementById("titulo").value;
+            let seccion1 = document.getElementById("seccion1").value;
+            let parrafo1 = document.getElementById("parrafo1").value;
+            let seccion2 = document.getElementById("seccion2").value;
+            let parrafo2 = document.getElementById("parrafo2").value;
+
+            document.getElementById("h1").innerText = "Título: " + titulo;
+            document.getElementById("h3.1").innerText = "Sección 1: " + seccion1;
+            document.getElementById("p1").innerText = parrafo1
+            document.getElementById("h3.2").innerText = "Sección 2: " + seccion2;
+            document.getElementById("p2").innerText = parrafo2
+        }
+    </script>
+
+</body>
+</html>
