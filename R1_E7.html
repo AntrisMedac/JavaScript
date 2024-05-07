@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Añade casillas a la tabla</h1>
+
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>Alumno</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+
+    <form action="formulario">
+        <label for="nombre"><h3>Nombre del alumno:</h3></label>
+        <input type="text" name="casillaNombre" id="nombre">
+        <label for="calificación"><h3>Calificación del alumno:</h3></label>
+        <input type="text" name="casillaCalificación" id="calificación">
+        <input type="button" value="Añadir nombre" id="boton" onclick="añadir()">
+    </form>
+
+    <script>
+        function añadir(){
+            let nombre = document.getElementById("nombre").value;
+            let calificación = document.getElementById("calificación").value;
+            let tbody = document.getElementById("tbody");
+            let tr = document.createElement("tr");
+            let tdN = document.createElement("td");
+            let tdC = document.createElement("td");
+
+            tdN.textContent = nombre;
+            tdC.textContent = calificación;
+
+            tr.appendChild(tdN);
+            tr.appendChild(tdC);
+
+            tbody.appendChild(tr);
+        }
+    </script>
+
+</body>
+</html>
