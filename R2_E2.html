@@ -9,8 +9,14 @@
     <h1></h1>
     <h2></h2>
     <script>
-        let nombreHijos=document.body.childNodes.nodeName;
-        alert(nombreHijos);
+        var numeroNodos=document.body.childNodes;
+        var i=0;
+        var nombreNodo="";
+
+        for(i=0;i<numeroNodos.length;i++){
+            nombreNodo=numeroNodos[i].nodeName;
+            alert(nombreNodo);
+        }
     </script>
 </body>
 </html>

@@ -15,9 +15,19 @@
         <li>Isidoro</li>
     </ul>
 
+    <input type="button" onclick="ver()">
+
     <script>
-        let lista=document.getElementById("lista").nodeValue;
-        alert(lista);
+        function ver(){
+            var lista=document.lista.childNodes;
+            var i=0;
+            var contenidoNodo="";
+
+            for(i=0;i<numeroNodos.length;i++){
+                contenidoNodo=numeroNodos[i].value;
+                alert(nombreNodo);
+            }
+        }
     </script>
 
 </body>
