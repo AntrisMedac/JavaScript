@@ -15,17 +15,16 @@
         <li>Isidoro</li>
     </ul>
 
-    <input type="button" onclick="ver()">
+    <input type="button" value="Mostrar" onclick="ver()">
 
     <script>
         function ver(){
-            var lista=document.lista.childNodes;
-            var i=0;
-            var contenidoNodo="";
+            var lista = document.getElementById("lista").childNodes;
+            var contenidoNodo = "";
 
-            for(i=0;i<numeroNodos.length;i++){
-                contenidoNodo=numeroNodos[i].value;
-                alert(nombreNodo);
+            for(var i = 0; i < lista.length; i++){
+                contenidoNodo = lista[i].textContent;
+                alert(contenidoNodo);
             }
         }
     </script>
