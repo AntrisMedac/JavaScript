@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+
+    <h3 id="titulo">Título:</h3>
+    <h4 id="seccion1">Sección 1:</h4>
+    <h4 id="seccion2">Sección 2:</h4>
+
+    <form>
+        <label>Introduce el título:</label><input type="text" id="inputTitulo"><br><br>
+        <label>Introduce la sección 1:</label><input type="text" id="inputSeccion1"><br><br>
+        <label>Introduce la sección 2:</label><input type="text" id="inputSeccion2"><br><br>
+        <input type="button" value="Mostrar" onclick="mostrarContenido()">
+    </form>
+  
+    <script>
+        function mostrarContenido() {
+            let titulo = document.getElementById("inputTitulo").value;
+            let seccion1 = document.getElementById("inputSeccion1").value;
+            let seccion2 = document.getElementById("inputSeccion2").value;
+            
+            document.getElementById("titulo").innerText = "Título: " + titulo;
+            document.getElementById("seccion1").innerText = "Sección 1: " + seccion1;
+            document.getElementById("seccion2").innerText = "Sección 2: " + seccion2;
+        }
+    </script> 
+
+</body>
+</html>
