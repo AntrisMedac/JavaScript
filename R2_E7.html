@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola mundo</h1>
+    <p>Haga clic para eliminar el título o para añadirlo de nuevo</p>
+    <input type="button" value="Borrar" onclick="borrar()">
+    <input type="button" value="Añadir" onclick="añadir()">
+
+    <script>
+        var titulo=document.querySelector("h1");
+        var contenidoTitulo=titulo.textContent;
+
+        function borrar(){
+            titulo.remove();
+        }
+
+        function añadir(){
+            var nuevoTitulo=document.createElement("h1");
+            nuevoTitulo.textContent=contenidoTitulo;
+            var primer=document.body.firstChild;
+            document.body.insertBefore(nuevoTitulo, primer);
+        }
+    </script>
+
+</body>
+</html>

@@ -12,17 +12,17 @@
     <h4 id="seccion2">Sección 2:</h4>
 
     <form>
-        <label>Introduce el título:</label><input type="text" id="inputTitulo"><br><br>
-        <label>Introduce la sección 1:</label><input type="text" id="inputSeccion1"><br><br>
-        <label>Introduce la sección 2:</label><input type="text" id="inputSeccion2"><br><br>
+        <label>Introduce el título:</label><input type="text" id="Titulo"><br><br>
+        <label>Introduce la sección 1:</label><input type="text" id="Seccion1"><br><br>
+        <label>Introduce la sección 2:</label><input type="text" id="Seccion2"><br><br>
         <input type="button" value="Mostrar" onclick="mostrarContenido()">
     </form>
   
     <script>
         function mostrarContenido() {
-            let titulo = document.getElementById("inputTitulo").value;
-            let seccion1 = document.getElementById("inputSeccion1").value;
-            let seccion2 = document.getElementById("inputSeccion2").value;
+            let titulo = document.getElementById("Titulo").value;
+            let seccion1 = document.getElementById("Seccion1").value;
+            let seccion2 = document.getElementById("Seccion2").value;
             
             document.getElementById("titulo").innerText = "Título: " + titulo;
             document.getElementById("seccion1").innerText = "Sección 1: " + seccion1;

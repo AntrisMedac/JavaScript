@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="lista">
+        <li>Jaén</li>
+        <li>Granada</li>
+        <li id="li">Sevilla</li>
+    </ul>
+    
+    <p>Haga clic para eliminar el elemento "li" con id="li" o para añadirlo una vez borrado</p>
+
+    <input type="button" value="Eliminar" onclick="eliminarElemento()">
+    <input type="button" value="Añadir" onclick="añadir()">
+
+    <script>
+
+        var lista = document.getElementById("lista");
+        var eliminar=document.getElementById("li");
+
+        function eliminarElemento(){
+            if(eliminar){
+                lista.removeChild(eliminar);
+            }
+        }
+
+        function añadir() {
+            var contieneSevilla = false;
+            var lis = lista.getElementsByTagName("li");
+
+            for (var i = 0; i < lis.length; i++) {
+                if (lis[i].textContent == "Sevilla") {
+                    contieneSevilla = true;
+                    break;
+                }
+            }
+            
+            if (!contieneSevilla) {
+                var nuevoLi = document.createElement("li");
+                nuevoLi.textContent = "Sevilla";
+                lista.appendChild(nuevoLi);
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

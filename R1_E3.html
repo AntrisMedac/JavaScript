@@ -9,13 +9,13 @@
     <h1 id="titulo">Añade párrafos</h1>
     <p>Introduce el nuevo párrafo:</p>
     <form>
-        <input type="text" id="inputParrafo"><br><br>
+        <input type="text" id="Parrafo"><br><br>
         <input type="button" value="Añadir" onclick="añadirParrafo()">
     </form>
 
     <script>
         function añadirParrafo(){
-            let nuevoParrafo = document.getElementById("inputParrafo").value;
+            let nuevoParrafo = document.getElementById("Parrafo").value;
             let nuevoElemento = document.createElement("p");
             let texto = document.createTextNode(nuevoParrafo);
             nuevoElemento.appendChild(texto);
