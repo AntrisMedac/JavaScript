@@ -21,8 +21,8 @@
         function eliminar(){
             var eliminar=document.getElementById("li");
 
-            if(eliminar){
-                lista.removeChild(eliminar);
+            if(eliminar && eliminar.parentNode){
+                eliminar.parentNode.removeChild(eliminar);
             }
         }
     </script>
