@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Añade párrafos</h1>
+    <h5 id="Introduce">Introduce el nuevo párrafo:</h5>
+    <form>
+        <input type="text" id="Parrafo"><br><br>
+        <input type="button" value="Añadir" onclick="añadirParrafo()">
+        <input type="button" value="Borrar parrafo" id="boton" onclick="borrar()">
+    </form>
+
+    <script>
+        function añadirParrafo(){
+            let nuevoParrafo = document.getElementById("Parrafo").value;
+            let nuevoElemento = document.createElement("p");
+            let texto = document.createTextNode(nuevoParrafo);
+            nuevoElemento.appendChild(texto);
+            document.body.insertBefore(nuevoElemento, Introduce);
+        }
+
+        function borrar(){
+            let parrafos=document.body.getElementsByTagName("p");
+            document.body.removeChild(parrafos[0]);
+        }
+    </script>
+</body>
+</html>

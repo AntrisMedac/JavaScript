@@ -8,14 +8,21 @@
 <body>
     <h1 id="titulo">Este es el título que vamos a cambiar</h1>
     <form>
-        <label>Introduce el nuevo título:</label><input type="text" id="Titulo"><br><br>
+        <label>Introduce el nuevo título:</label><input type="text" id="nuevoTitulo"><br><br>
         <input type="button" value="Mostrar" onclick="cambiarTitulo()">
     </form>
 
     <script>
         function cambiarTitulo(){
-            let nuevoTitulo = document.getElementById("Titulo").value;
-            document.getElementById("titulo").innerText = nuevoTitulo;
+
+            var nuevo= document.createElement("h3");
+            var titulo_nuevo= document.getElementById("nuevoTitulo");
+            var texto= document.createTextNode(nuevoTitulo.value);
+            nuevo.appendChild(texto);
+
+            var titulo_antiguo= document.getElementById("titulo");
+            var padre= titulo_antiguo.parentNode;
+            padre.replaceChild(nuevo, titulo_antiguo);
         }
     </script>
 </body>
